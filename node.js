@@ -2,20 +2,20 @@ var linebot = require('linebot');
 var express = require('express');
 
 var bot = linebot({
-  channelId:'1511958569',
-  channelSecret:'5d536ccf4896dab8c3c2e07e3e066604',
-  channelAccessToken:'BvF2aekY5Cds78KP2BuDIGlr98BXpxi/eVb6sL3j11vVe6+y9RGn7fuoi6KYTB92iHjHqG79QP6FCc7l+PMhsEQ8/P03boI6lHuGACi6S2mPi0+21+XR3jkYu2usVfdCOn0DP/FDHlQyQrG2B/feHQdB04t89/1O/w1cDnyilFU='
+  channelId:"1511958569",
+  channelSecret:"5d536ccf4896dab8c3c2e07e3e066604",
+  channelAccessToken:"BvF2aekY5Cds78KP2BuDIGlr98BXpxi/eVb6sL3j11vVe6+y9RGn7fuoi6KYTB92iHjHqG79QP6FCc7l+PMhsEQ8/P03boI6lHuGACi6S2mPi0+21+XR3jkYu2usVfdCOn0DP/FDHlQyQrG2B/feHQdB04t89/1O/w1cDnyilFU="
 });
 
 bot.on('message', function(event) {
-  console.log(event); //§â¦¬¨ì°T®§ªº event ¦L¥X¨Ó¬İ¬İ
+  console.log(event); //æŠŠæ”¶åˆ°è¨Šæ¯çš„ event å°å‡ºä¾†çœ‹çœ‹
 });
 
 const app = express();
 const linebotParser = bot.parser();
 app.post('/', linebotParser);
 
-//¦]¬° express ¹w³]¨« port 3000¡A¦Ó heroku ¤W¹w³]«o¤£¬O¡A­n³z¹L¤U¦Cµ{¦¡Âà´«
+//å› ç‚º express é è¨­èµ° port 3000ï¼Œè€Œ heroku ä¸Šé è¨­å»ä¸æ˜¯ï¼Œè¦é€éä¸‹åˆ—ç¨‹å¼è½‰æ›
 var server = app.listen(process.env.PORT || 8080, function() {
   var port = server.address().port;
   console.log("App now running on port", port);
